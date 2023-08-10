@@ -17,15 +17,15 @@ namespace LiveSplit.UI.Components
 
         public string ComponentName => "Pseudoregalia Save Deleter";
 
-        public float HorizontalWidth => InternalComponent.HorizontalWidth;
-        public float MinimumHeight => InternalComponent.MinimumHeight;
-        public float VerticalHeight => InternalComponent.VerticalHeight;
-        public float MinimumWidth => InternalComponent.MinimumWidth;
+        public float HorizontalWidth => 0;
+        public float MinimumHeight => 0;
+        public float VerticalHeight => 0;
+        public float MinimumWidth => 0;
 
-        public float PaddingTop => InternalComponent.PaddingTop;
-        public float PaddingBottom => InternalComponent.PaddingBottom;
-        public float PaddingLeft => InternalComponent.PaddingLeft;
-        public float PaddingRight => InternalComponent.PaddingRight;
+        public float PaddingTop => 0;
+        public float PaddingBottom => 0;
+        public float PaddingLeft => 0;
+        public float PaddingRight => 0;
 
         public IDictionary<string, Action> ContextMenuControls => null;
 
@@ -65,31 +65,9 @@ namespace LiveSplit.UI.Components
             }
         }
 
-        public void DrawHorizontal(Graphics g, LiveSplitState state, float height, Region clipRegion)
-        {
-            InternalComponent.NameLabel.HasShadow
-                = InternalComponent.ValueLabel.HasShadow
-                = state.LayoutSettings.DropShadows;
+        public void DrawHorizontal(Graphics g, LiveSplitState state, float height, Region clipRegion) {}
 
-            InternalComponent.NameLabel.ForeColor = state.LayoutSettings.TextColor;
-            InternalComponent.ValueLabel.ForeColor = state.LayoutSettings.TextColor;
-
-            InternalComponent.DrawHorizontal(g, state, height, clipRegion);
-        }
-
-        public void DrawVertical(Graphics g, LiveSplitState state, float width, Region clipRegion)
-        {
-            InternalComponent.DisplayTwoRows = false;
-
-            InternalComponent.NameLabel.HasShadow
-                = InternalComponent.ValueLabel.HasShadow
-                = state.LayoutSettings.DropShadows;
-
-            InternalComponent.NameLabel.ForeColor = state.LayoutSettings.TextColor;
-            InternalComponent.ValueLabel.ForeColor = state.LayoutSettings.TextColor;
-
-            InternalComponent.DrawVertical(g, state, width, clipRegion);
-        }
+        public void DrawVertical(Graphics g, LiveSplitState state, float width, Region clipRegion) {}
 
         public Control GetSettingsControl(LayoutMode mode)
         {
@@ -107,10 +85,7 @@ namespace LiveSplit.UI.Components
             Settings.SetSettings(settings);
         }
 
-        public void Update(IInvalidator invalidator, LiveSplitState state, float width, float height, LayoutMode mode)
-        {
-            
-        }
+        public void Update(IInvalidator invalidator, LiveSplitState state, float width, float height, LayoutMode mode) {}
 
         public void Dispose()
         {
