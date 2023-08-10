@@ -3,3 +3,5 @@
 
 # Install
  Add the `LiveSplit.PseudoregaliaSaveDeleter.dll` to your LiveSplit Components Folder.
+ Add `Other > Pseudoregalia Save Deleter` to your LiveSplit Layout.
+ Double Click the `Pseudoregalia Save Deleter` and chose the settings you like.
